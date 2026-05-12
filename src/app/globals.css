@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+
+.glassmorphism {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.blob-shape {
+  border-radius: 50% 50% 50% 70% / 60% 60% 40% 40%;
+  background: linear-gradient(135deg, rgba(255, 112, 67, 0.1) 0%, rgba(66, 165, 245, 0.1) 100%);
+  filter: blur(40px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FF7043 0%, #42A5F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
