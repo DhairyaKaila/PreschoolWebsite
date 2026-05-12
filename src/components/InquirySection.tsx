@@ -73,12 +73,14 @@ const InquirySection = () => {
       icon: Phone,
       label: "Phone Number",
       value: "94082 22614",
+      href: "tel:9408222614",
       color: "text-secondary"
     },
     {
       icon: Mail,
       label: "Email",
       value: "sanvipreschool2024@gmail.com",
+      href: "mailto:sanvipreschool2024@gmail.com",
       color: "text-accent"
     },
     {
@@ -138,7 +140,13 @@ const InquirySection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-text mb-1">{info.label}</h4>
-                    <p className="text-muted">{info.value}</p>
+                    {info.href ? (
+                      <a href={info.href} className="text-muted hover:text-primary transition-colors duration-200">
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-muted">{info.value}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -193,7 +201,7 @@ const InquirySection = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={slideRightVariant}
           >
-            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 shadow-lg">
+            <div className="lg:bg-gradient-to-br lg:from-primary/5 lg:to-secondary/5 lg:rounded-3xl lg:p-8 lg:shadow-lg p-0">
               <h3 className="font-nunito font-bold text-2xl text-text mb-6">
                 Book a Free School Visit
               </h3>
@@ -309,7 +317,7 @@ const InquirySection = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+                  className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
                   <span>Book School Visit</span>

@@ -48,7 +48,7 @@ const Footer = () => {
                   alt="Sanvi Pre School Logo" 
                   className="w-10 h-10 object-contain"
                 />
-                <span className="font-nunito font-bold text-xl" style={{ color: '#54131d' }}>
+                <span className="font-nunito font-bold text-xl text-white">
                   Sanvi Pre School
                 </span>
               </div>
@@ -140,11 +140,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone size={16} className="text-primary flex-shrink-0" />
-                  <p className="text-sm text-gray-300">94082 22614</p>
+                  <a href="tel:9408222614" className="text-sm text-gray-300 hover:text-white transition-colors duration-200">94082 22614</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={16} className="text-primary flex-shrink-0" />
-                  <p className="text-sm text-gray-300">sanvipreschool2024@gmail.com</p>
+                  <a href="mailto:sanvipreschool2024@gmail.com" className="text-sm text-gray-300 hover:text-white transition-colors duration-200">sanvipreschool2024@gmail.com</a>
                 </div>
               </div>
               

@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Users, Palette, Trees, Music, Book, BedDouble, Apple } from "lucide-react";
 
 const DailyActivitySection = () => {
   const ref = useRef(null);
@@ -21,49 +22,49 @@ const DailyActivitySection = () => {
   const activities = [
     {
       time: "8:00 AM",
-      emoji: "⭕",
+      icon: <Users className="w-8 h-8" />,
       title: "Circle Time",
       description: "Morning greetings, songs, and daily planning",
       color: "from-orange-400 to-orange-500"
     },
     {
       time: "9:00 AM",
-      emoji: "🎨",
+      icon: <Palette className="w-8 h-8" />,
       title: "Creative Activities",
       description: "Art, craft, and expressive learning",
       color: "from-pink-400 to-pink-500"
     },
     {
       time: "10:00 AM",
-      emoji: "🏃",
+      icon: <Trees className="w-8 h-8" />,
       title: "Outdoor Play",
       description: "Physical activities and gross motor development",
       color: "from-green-400 to-green-500"
     },
     {
       time: "11:00 AM",
-      emoji: "🎵",
+      icon: <Music className="w-8 h-8" />,
       title: "Music & Dance",
       description: "Rhythm, movement, and musical exploration",
       color: "from-purple-400 to-purple-500"
     },
     {
       time: "12:00 PM",
-      emoji: "📚",
+      icon: <Book className="w-8 h-8" />,
       title: "Storytelling",
       description: "Interactive stories and language development",
       color: "from-blue-400 to-blue-500"
     },
     {
       time: "1:00 PM",
-      emoji: "😴",
+      icon: <BedDouble className="w-8 h-8" />,
       title: "Nap Time",
       description: "Rest and rejuvenation for little ones",
       color: "from-indigo-400 to-indigo-500"
     },
     {
       time: "2:30 PM",
-      emoji: "🥗",
+      icon: <Apple className="w-8 h-8" />,
       title: "Healthy Snacks",
       description: "Nutritious meals and social dining",
       color: "from-yellow-400 to-yellow-500"
@@ -113,7 +114,7 @@ const DailyActivitySection = () => {
                 transition={{ duration: 0.3 }}
                 className={`w-20 h-20 bg-gradient-to-br ${activity.color} rounded-full flex items-center justify-center mb-3 shadow-lg cursor-pointer mx-auto`}
               >
-                <span className="text-2xl">{activity.emoji}</span>
+                <div className="text-white">{activity.icon}</div>
               </motion.div>
 
               {/* Activity Info */}
@@ -162,7 +163,7 @@ const DailyActivitySection = () => {
                       transition={{ duration: 0.3 }}
                       className={`w-16 h-16 bg-gradient-to-br ${activity.color} rounded-full flex items-center justify-center shadow-lg -mt-2`}
                     >
-                      <span className="text-xl">{activity.emoji}</span>
+                      <div className="text-white">{activity.icon}</div>
                     </motion.div>
                   </div>
 

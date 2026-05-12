@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Calendar, MessageCircle, Star, Users, Shield } from "lucide-react";
+import { Calendar, MessageCircle, Star, Users, Shield, Trophy } from "lucide-react";
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -24,8 +24,8 @@ const HeroSection = () => {
   };
 
   const floatingBadges = [
-    { icon: "⭐", text: "4.9/5 Rating", position: "top-4 left-4" },
-    { icon: "👨‍👩‍👧", text: "500+ Happy Families", position: "bottom-4 right-4" }
+    { icon: <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />, text: "5/5 Rating", position: "top-4 left-4" },
+    { icon: <Users className="w-4 h-4 text-blue-500" />, text: "500+ Happy Families", position: "bottom-4 right-4" }
   ];
 
   const trustPoints = [
@@ -56,7 +56,7 @@ const HeroSection = () => {
           >
             {/* Trust Badge */}
             <motion.div variants={blurInVariant} className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full mb-6">
-              <span className="text-lg">🌟</span>
+              <Trophy className="w-5 h-5" />
               <span className="text-sm font-medium">Trusted by 500+ Families</span>
             </motion.div>
 
@@ -88,14 +88,14 @@ const HeroSection = () => {
               variants={blurInVariant}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
-              <button className="flex items-center justify-center space-x-2 bg-black text-white px-8 py-4 rounded-full hover:bg-black/90 transition-all duration-200 hover-lift">
+              <a href="#contact" className="flex items-center justify-center space-x-2 bg-black text-white px-8 py-4 rounded-full hover:bg-black/90 transition-all duration-200 hover-lift">
                 <Calendar size={20} />
                 <span className="font-medium">Book a School Visit</span>
-              </button>
-              <button className="flex items-center justify-center space-x-2 border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-black hover:text-white hover:border-black transition-all duration-200">
+              </a>
+              <a href="https://wa.me/919408222614" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-black hover:text-white hover:border-black transition-all duration-200">
                 <MessageCircle size={20} />
                 <span className="font-medium">Enquire Now</span>
-              </button>
+              </a>
             </motion.div>
 
             {/* Trust Points */}
@@ -140,7 +140,7 @@ const HeroSection = () => {
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                   className={`absolute ${badge.position} bg-white rounded-full shadow-lg px-3 py-2 flex items-center space-x-1 animate-float`}
                 >
-                  <span className="text-lg">{badge.icon}</span>
+                  <div className="text-lg">{badge.icon}</div>
                   <span className="text-xs font-medium text-text">{badge.text}</span>
                 </motion.div>
               ))}

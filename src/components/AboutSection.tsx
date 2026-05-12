@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Heart, Shield, Lightbulb, Palette } from "lucide-react";
+import { Heart, Shield, Lightbulb, Palette, Sprout, BookOpen } from "lucide-react";
 import Image from "next/image";
 
 const AboutSection = () => {
@@ -61,13 +61,13 @@ const AboutSection = () => {
       type: "Founder",
       name: "Mrs. Ananya Sharma",
       message: "Every child is a seed of potential. With the right environment and care, they blossom into extraordinary individuals.",
-      emoji: "🌱"
+      icon: <Sprout className="w-8 h-8 text-green-500" />
     },
     {
       type: "Principal",
       name: "Dr. Rajesh Kumar",
       message: "Education is not about filling a bucket, but lighting a fire of curiosity that lasts a lifetime.",
-      emoji: "📚"
+      icon: <BookOpen className="w-8 h-8 text-blue-500" />
     }
   ];
 
@@ -154,7 +154,7 @@ const AboutSection = () => {
               className="bg-gradient-to-br from-background to-white border border-gray-100 rounded-2xl p-6 shadow-sm hover-lift"
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="text-3xl">{card.emoji}</div>
+                <div className="text-3xl">{card.icon}</div>
                 <div>
                   <div className="text-sm font-medium text-primary">{card.type}</div>
                   <div className="font-semibold text-text">{card.name}</div>

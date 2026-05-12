@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, Variants } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Quote, User, Building } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       childClass: "Nursery",
       rating: 5,
       review: "Sanvi Pre School has been a blessing for our family. Aarav has become so confident and loves going to school every day. The teachers are incredibly caring and the curriculum is perfect for his age.",
-      avatar: "👩"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       childClass: "Jr. KG",
       rating: 5,
       review: "The attention to detail and individual care each child receives is remarkable. Ananya has developed amazing social skills and her language development has exceeded our expectations.",
-      avatar: "👨"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
       childClass: "Playgroup",
       rating: 5,
       review: "As a first-time parent, I was nervous about sending Kabir to preschool. The staff made the transition so smooth. He's learned so much and made wonderful friends.",
-      avatar: "👩"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
       childClass: "Sr. KG",
       rating: 5,
       review: "The holistic approach to education is what sets Sanvi Pre School apart. Diya is not just academically prepared but also emotionally intelligent and confident.",
-      avatar: "👨"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 5,
@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
       childClass: "Daycare",
       rating: 5,
       review: "The daycare program is excellent. Rohan loves the activities and the healthy meals. As working parents, we have complete peace of mind knowing he's in safe hands.",
-      avatar: "👩"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
       childClass: "Nursery",
       rating: 5,
       review: "The facilities are top-notch and the CCTV surveillance gives us great comfort. Myra has blossomed from a shy toddler to a confident little girl.",
-      avatar: "👨"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 7,
@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
       childClass: "Jr. KG",
       rating: 5,
       review: "The activity-based learning approach is fantastic. Arjun comes home excited every day with new things he's learned. The parent-teacher communication is excellent.",
-      avatar: "👩"
+      avatar: <User className="w-6 h-6" />
     },
     {
       id: 8,
@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
       childClass: "Sr. KG",
       rating: 5,
       review: "Sanvi Pre School has prepared Sara perfectly for primary school. The foundation they build is strong and the values they instill will last a lifetime.",
-      avatar: "👨"
+      avatar: <User className="w-6 h-6" />
     }
   ];
 
@@ -204,7 +204,7 @@ const TestimonialsSection = () => {
                     {/* Parent Info */}
                     <div className="flex items-center space-x-3 mt-auto">
                       <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full flex items-center justify-center">
-                        <span className="text-xl">{testimonial.avatar}</span>
+                        <div className="text-primary">{testimonial.avatar}</div>
                       </div>
                       <div>
                         <div className="font-semibold text-text">{testimonial.name}</div>
@@ -216,7 +216,7 @@ const TestimonialsSection = () => {
 
                     {/* School Badge */}
                     <div className="mt-4 inline-flex items-center space-x-1 bg-accent/10 text-accent px-3 py-1 rounded-full">
-                      <span className="text-xs">🏫</span>
+                      <Building className="w-3 h-3" />
                       <span className="text-xs font-medium">Sanvi Pre School</span>
                     </div>
                   </motion.div>

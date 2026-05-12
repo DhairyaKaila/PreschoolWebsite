@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import { Microscope, Rocket, BookOpen, Book, Palette, Music, Star } from "lucide-react";
 
 const CurriculumSection = () => {
   const blurInVariant: Variants = {
@@ -21,43 +22,43 @@ const CurriculumSection = () => {
 
   const curriculumCards = [
     {
-      emoji: "🔬",
+      icon: <Microscope className="w-8 h-8" />,
       title: "Activity-Based Learning",
       description: "Hands-on experiences that make learning fun and memorable through exploration and discovery.",
       color: "from-orange-400 to-orange-500"
     },
     {
-      emoji: "🚀",
+      icon: <Rocket className="w-8 h-8" />,
       title: "STEAM Learning",
       description: "Integrating Science, Technology, Engineering, Arts, and Mathematics for holistic development.",
       color: "from-blue-400 to-blue-500"
     },
     {
-      emoji: "📖",
+      icon: <BookOpen className="w-8 h-8" />,
       title: "Phonics",
       description: "Systematic phonics instruction to build strong reading and language foundations.",
       color: "from-green-400 to-green-500"
     },
     {
-      emoji: "📚",
+      icon: <Book className="w-8 h-8" />,
       title: "Storytelling",
       description: "Developing imagination, language skills, and emotional intelligence through stories.",
       color: "from-purple-400 to-purple-500"
     },
     {
-      emoji: "🎨",
+      icon: <Palette className="w-8 h-8" />,
       title: "Art & Craft",
       description: "Creative expression through various art mediums enhancing fine motor skills and creativity.",
       color: "from-pink-400 to-pink-500"
     },
     {
-      emoji: "🎵",
+      icon: <Music className="w-8 h-8" />,
       title: "Dance & Music",
       description: "Rhythm, movement, and musical activities for physical coordination and emotional expression.",
       color: "from-indigo-400 to-indigo-500"
     },
     {
-      emoji: "🌟",
+      icon: <Star className="w-8 h-8" />,
       title: "Life Skills",
       description: "Essential life skills including independence, social skills, and emotional regulation.",
       color: "from-yellow-400 to-yellow-500"
@@ -113,7 +114,7 @@ const CurriculumSection = () => {
                 transition={{ duration: 0.5 }}
                 className={`w-16 h-16 bg-gradient-to-br ${card.color} rounded-2xl flex items-center justify-center mb-4 group-hover:shadow-lg transition-shadow duration-300`}
               >
-                <span className="text-2xl">{card.emoji}</span>
+                <div className="text-white">{card.icon}</div>
               </motion.div>
 
               {/* Title */}

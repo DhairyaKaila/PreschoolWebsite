@@ -27,9 +27,6 @@ const WhatsAppButton = () => {
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle size={28} className="group-hover:rotate-12 transition-transform duration-300" />
-        
-        {/* Pulse Animation */}
-        <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75"></span>
       </button>
       
       {/* Tooltip */}
